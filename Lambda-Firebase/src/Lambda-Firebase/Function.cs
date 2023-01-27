@@ -89,7 +89,7 @@ public class Function
             var dinnerResponse = await dinnerTasks[index];
             data[hall].lunch = lunchResponse.menu.periods.categories;
             data[hall].dinner = dinnerResponse.menu.periods.categories;
-            data[hall].date = date;
+            data[hall].date = dinnerResponse.menu.date;
             index++;
         }
         context.Logger.LogInformation($"Unpacked lunch and dinner responses");
